@@ -3,7 +3,7 @@ FROM alpine:latest
 MAINTAINER Ben Davis <ben@davisben.com>
 
 RUN	apk update && \
-	apk add --update \
+	apk add --no-cache \
 	curl \
 	git \
 	npm \
@@ -14,7 +14,6 @@ RUN	apk update && \
 	php7-openssl \
 	php7-phar \
 	php7-zip && \
-    rm -rf /var/cache/apk/* && \
 	curl -sS https://getcomposer.org/installer | php && \
 	mv composer.phar /usr/local/bin/composer && \
 	chmod +x /usr/local/bin/composer && \
