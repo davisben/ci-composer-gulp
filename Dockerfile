@@ -18,5 +18,3 @@ RUN	apk update && \
 	mv composer.phar /usr/local/bin/composer && \
 	chmod +x /usr/local/bin/composer && \
 	npm install -g gulp-cli
-	
-RUN gulp -v
